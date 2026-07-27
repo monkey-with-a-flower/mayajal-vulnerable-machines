@@ -1,5 +1,8 @@
 # Mayajal vulnerable machines
 
+This repository contains vulnerable machines for the self-hosted Mayajal
+cybersecurity practice lab.
+
 Each immediate machine folder is independently importable by Mayajal.
 
 Required files:
