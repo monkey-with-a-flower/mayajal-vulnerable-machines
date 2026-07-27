@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-1001",
+  "field": "log",
+  "pattern": "mayajal_weak_password_login.*outcome=failure",
+  "tactic": "Credential Access",
+  "technique_id": "T1110",
+  "technique": "Brute Force",
+  "rationale": "The payroll application recorded a failed password attempt."
+}
