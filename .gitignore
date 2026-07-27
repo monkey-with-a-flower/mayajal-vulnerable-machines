@@ -1,0 +1,12 @@
+.DS_Store
+*** Add File: /Users/sakarmahat/Containers/mayajal/vulnerable-machines-repository/weak-password-login/machine.json
+{
+  "name": "Weak Password Payroll",
+  "image": "mayajal/weak-password-login:demo",
+  "os_type": "Linux",
+  "description": "Demo payroll web app with an instance-specific weak credential.",
+  "ports": ["8080"],
+  "network_aliases": ["payroll", "weak-password-login"],
+  "restart_policy": "unless-stopped",
+  "tty": true
+}
