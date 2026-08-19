@@ -1,18 +1,22 @@
 {
   "name": "Weak Password Payroll",
-  "image": "mayajal/weak-password-login:demo",
+  "image": "mayajal/weak-password-login:1.0",
   "os_type": "Linux",
-  "description": "Demo payroll web app with an instance-specific weak credential.",
+  "description": "A payroll web app for practising password guessing against an instance-specific weak credential.",
   "ports": ["8080"],
   "network_aliases": ["payroll", "weak-password-login"],
   "restart_policy": "unless-stopped",
-  "tty": true,
+  "tty": false,
   "detection": {
     "network": {
       "suricata": ["detections/network/weak-password-login.rules"]
     },
     "logs": {
-      "application": ["detections/application-logs/failed-login.json"],
+      "application": [
+        "detections/application-logs/failed-login.json",
+        "detections/application-logs/successful-login.json",
+        "detections/application-logs/flag-access.json"
+      ],
       "system": []
     }
   }

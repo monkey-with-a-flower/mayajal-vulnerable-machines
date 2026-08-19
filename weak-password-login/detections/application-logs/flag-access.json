@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-1003",
+  "field": "log",
+  "pattern": "mayajal_weak_password_login event=protected_objective_access outcome=success",
+  "tactic": "Collection",
+  "technique_id": "T1213",
+  "technique": "Data from Information Repositories",
+  "rationale": "An authenticated user opened the protected payroll response containing the lab flag."
+}

@@ -24,8 +24,15 @@ LOGIN_TEMPLATE = """
 </main></body></html>
 """
 
-def log_event(outcome: str, username: str) -> None:
-    app.logger.info("mayajal_weak_password_login outcome=%s username=%s source_ip=%s timestamp=%s", outcome, username, request.remote_addr or "unknown", datetime.now(timezone.utc).isoformat())
+def log_event(event: str, outcome: str, username: str) -> None:
+    app.logger.info(
+        "mayajal_weak_password_login event=%s outcome=%s username=%s source_ip=%s timestamp=%s",
+        event,
+        outcome,
+        username,
+        request.remote_addr or "unknown",
+        datetime.now(timezone.utc).isoformat(),
+    )
 
 @app.get("/")
 def index():
@@ -38,15 +45,16 @@ def login():
     username, password = request.form.get("username", ""), request.form.get("password", "")
     if USERS.get(username) == password:
         session["username"] = username
-        log_event("success", username)
+        log_event("authentication", "success", username)
         return redirect("/dashboard")
-    log_event("failure", username)
+    log_event("authentication", "failure", username)
     return render_template_string(LOGIN_TEMPLATE, error="Invalid username or password."), 401
 
 @app.get("/dashboard")
 def dashboard():
     if not session.get("username"):
         return redirect("/login")
+    log_event("protected_objective_access", "success", session["username"])
     return {"message": "Welcome to Northstar Payroll.", "user": session["username"], "flag": "MAYAJAL{weak_password_payroll_access}"}
 
 @app.get("/health")
