@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3003",
+  "field": "log",
+  "pattern": "mayajal_monitor event=mass_rename outcome=threshold_reached",
+  "tactic": "Impact",
+  "technique_id": "T1486",
+  "technique": "Data Encrypted for Impact",
+  "rationale": "At least 30 files were renamed with a ransomware-style extension within ten seconds."
+}

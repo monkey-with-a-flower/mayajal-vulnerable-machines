@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3004",
+  "field": "log",
+  "pattern": "mayajal_monitor event=canary_modified outcome=detected",
+  "tactic": "Impact",
+  "technique_id": "T1486",
+  "technique": "Data Encrypted for Impact",
+  "rationale": "A seeded canary file was modified, confirming file-impact activity independent of payload naming."
+}

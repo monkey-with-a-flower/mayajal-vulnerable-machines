@@ -1,0 +1,25 @@
+{
+  "name": "Nimbus Logistics — Compromised Fileserver",
+  "image": "mayajal/ransomsim:1.0",
+  "os_type": "Linux",
+  "description": "Students deliver and execute a self-written ransomware payload against an internal fileserver's shared drive via SSH/SCP, demonstrating file-impact detection independent of payload implementation.",
+  "ports": ["22"],
+  "network_aliases": ["nimbus-fileserver", "ransomsim"],
+  "restart_policy": "unless-stopped",
+  "tty": false,
+  "detection": {
+    "network": {
+      "suricata": ["detections/network/ransomsim.rules"]
+    },
+    "logs": {
+      "application": [
+        "detections/application-logs/accepted-ssh-login.json",
+        "detections/application-logs/file-activity-burst.json",
+        "detections/application-logs/mass-rename.json",
+        "detections/application-logs/canary-modified.json",
+        "detections/application-logs/ransom-note-created.json"
+      ],
+      "system": []
+    }
+  }
+}

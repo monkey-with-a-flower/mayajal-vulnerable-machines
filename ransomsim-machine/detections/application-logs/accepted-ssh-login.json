@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3001",
+  "field": "log",
+  "pattern": "sshd.*Accepted password for student",
+  "tactic": "Initial Access",
+  "technique_id": "T1078",
+  "technique": "Valid Accounts",
+  "rationale": "The student authenticated to the internal fileserver using the provided credentials."
+}

@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3002",
+  "field": "log",
+  "pattern": "mayajal_monitor event=file_activity_burst outcome=threshold_reached",
+  "tactic": "Impact",
+  "technique_id": "T1486",
+  "technique": "Data Encrypted for Impact",
+  "rationale": "At least 30 file modifications occurred within ten seconds, consistent with ransomware encryption behavior."
+}

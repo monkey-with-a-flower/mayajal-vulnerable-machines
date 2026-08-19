@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3005",
+  "field": "log",
+  "pattern": "mayajal_monitor event=ransom_note_created outcome=detected",
+  "tactic": "Impact",
+  "technique_id": "T1486",
+  "technique": "Data Encrypted for Impact",
+  "rationale": "A ransom note was written to the shared directory, confirming that the attack objective was achieved."
+}
