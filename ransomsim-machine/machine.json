@@ -15,6 +15,7 @@
       "application": [
         "detections/application-logs/accepted-ssh-login.json",
         "detections/application-logs/file-activity-burst.json",
+        "detections/application-logs/encryption-detected.json",
         "detections/application-logs/mass-rename.json",
         "detections/application-logs/canary-modified.json",
         "detections/application-logs/ransom-note-created.json"

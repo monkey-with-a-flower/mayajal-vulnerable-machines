@@ -1,0 +1,9 @@
+{
+  "id": "MAYAJAL-APP-3006",
+  "field": "log",
+  "pattern": "mayajal_monitor event=encryption_detected outcome=threshold_reached",
+  "tactic": "Impact",
+  "technique_id": "T1486",
+  "technique": "Data Encrypted for Impact",
+  "rationale": "At least 30 completed file writes produced valid Base64 content within ten seconds, identifying the content-transformation stage independently of filenames and rename order."
+}
